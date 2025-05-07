@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { showFormattedDate } from "../utils";
 
 const NoteItemDate = ({ dateContent }) => {
-  return <div>{dateContent}</div>;
+  return (
+    <span className="note-item__date">{showFormattedDate(dateContent)}</span>
+  );
 };
 
 NoteItemDate.propTypes = {

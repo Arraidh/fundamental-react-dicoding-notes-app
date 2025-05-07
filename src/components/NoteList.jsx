@@ -3,9 +3,20 @@ import NoteItem from "./NoteItem";
 import PropTypes from "prop-types";
 
 const NoteList = ({ notes = [], onDelete }) => {
-  return notes.map((note) => (
-    <NoteItem key={note.id} id={note.id} onDelete={onDelete} {...note} />
-  ));
+  return (
+    <section className="note-list">
+      {notes?.length > 0
+        ? notes?.map((note) => (
+            <NoteItem
+              key={note.id}
+              id={note.id}
+              onDelete={onDelete}
+              {...note}
+            />
+          ))
+        : "Tidan ada catatan"}
+    </section>
+  );
 };
 
 NoteList.propTypes = {

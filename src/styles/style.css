@@ -13,19 +13,19 @@ img {
   width: 100%;
 }
 
-.contact-app {
+.note-app {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
 }
 
-.contact-app__header {
+.note-app__header {
   display: flex;
   align-items: center;
   padding: 32px 0;
 }
 
-.contact-app__header h1 {
+.note-app__header h1 {
   font-weight: normal;
   font-size: 32px;
   flex: 1;
@@ -41,36 +41,59 @@ img {
   color: black;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin: 24px 0;
-  border: 2px dashed black;
-  padding: 16px;
-  border-radius: 8px;
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1em;
+  margin-top: 16px;
 }
 
-.contact-item__image img {
+.note-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* */
+}
+
+.note-item__image img {
   width: 64px;
   border-radius: 50%;
 }
 
-.contact-item__body {
+.note-item__body {
   margin-left: 8px;
   padding-left: 8px;
   border-left: 1px solid #aaa;
   flex: 1;
+  font-size: 14px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
-.contact-item__title {
+.note-item__date {
+  font-size: 12px;
+  color: oklch(55.1% 0.027 264.364);
+}
+
+.note-item__title {
+  font-size: 16px;
   padding: 4px 0;
+
+  color: oklch(21% 0.034 264.665);
 }
 
-.contact-item__username {
+.note-item__username {
   font-weight: lighter;
 }
 
-.contact-item__delete {
+.note-item__delete {
   padding: 8px;
   font-size: 28px;
   color: red;
@@ -80,7 +103,7 @@ img {
   cursor: pointer;
 }
 
-.contact-input {
+.note-input {
   border: 2px dashed black;
   padding: 16px;
   margin: 14px 0;
@@ -88,7 +111,7 @@ img {
   margin-bottom: 32px;
 }
 
-.contact-input input {
+.note-input input {
   display: block;
   width: 100%;
   padding: 8px;
@@ -96,7 +119,7 @@ img {
   font-family: "Inter", sans-serif;
 }
 
-.contact-input button {
+.note-input button {
   width: 100%;
   padding: 8px;
   font-family: "Inter", sans-serif;

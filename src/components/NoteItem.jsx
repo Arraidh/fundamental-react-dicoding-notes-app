@@ -6,12 +6,11 @@ import PropTypes from "prop-types";
 
 // TODO setup archived note functionality
 
-const NoteItem = ({ title, body, createdAt, archived }) => {
-  console.log(title);
+const NoteItem = ({ id, title, body, createdAt, archived }) => {
   return (
-    <div>
+    <div className="note-item">
       <NoteItemDate dateContent={createdAt} />
-      <NoteItemTitle titleContent={title} />
+      <NoteItemTitle titleContent={title} id={id} />
       <NoteItemBody bodyContent={body} />
     </div>
   );

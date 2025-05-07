@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const NoteItemBody = ({ bodyContent }) => {
-  return <div>{bodyContent}</div>;
+  return <p className="note-item__body">{bodyContent}</p>;
 };
 
 NoteItemBody.propTypes = {
