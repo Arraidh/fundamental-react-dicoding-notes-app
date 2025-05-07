@@ -6,7 +6,7 @@ import { showFormattedDate } from "../utils";
 const NoteDetail = () => {
   const { noteId } = useParams();
 
-  const { id, body, createdAt, archived, title } = getNote(noteId);
+  const { body, createdAt, title } = getNote(noteId);
 
   return (
     <div>

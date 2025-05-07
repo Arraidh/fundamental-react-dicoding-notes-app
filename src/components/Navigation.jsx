@@ -12,7 +12,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li>
-          <Link to="/add">
+          <Link to="/notes/add">
             <FiPlusCircle />
           </Link>
         </li>

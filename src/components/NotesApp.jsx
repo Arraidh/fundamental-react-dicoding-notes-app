@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import { Route, Routes } from "react-router-dom";
 import HomePages from "../pages/HomePages";
 import NoteDetail from "../pages/NoteDetail";
+import AddNote from "../pages/AddNote";
 
 const NotesApp = () => {
   return (
@@ -16,6 +17,7 @@ const NotesApp = () => {
         <Routes>
           <Route path="/" element={<HomePages />} />
           <Route path="note/:noteId" element={<NoteDetail />} />
+          <Route path="notes/add" element={<AddNote />} />
         </Routes>
       </main>
     </div>
