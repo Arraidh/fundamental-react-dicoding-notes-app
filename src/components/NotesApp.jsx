@@ -1,10 +1,9 @@
 import React from "react";
 import Navigation from "./Navigation";
 import { Route, Routes } from "react-router-dom";
-import HomePages from "../pages/HomePages";
 import NoteDetail from "../pages/NoteDetail";
 import AddNote from "../pages/AddNote";
-import ArchivedPages from "../pages/ArchivedPages";
+import NoteListPage from "../pages/NoteListPage";
 
 const NotesApp = () => {
   return (
@@ -16,8 +15,8 @@ const NotesApp = () => {
 
       <main>
         <Routes>
-          <Route path="/" element={<HomePages />} />
-          <Route path="archived" element={<ArchivedPages />} />
+          <Route path="/" element={<NoteListPage activeNote={true} />} />
+          <Route path="archived" element={<NoteListPage activeNote={false} />} />
           <Route path="note/:noteId" element={<NoteDetail />} />
           <Route path="notes/add" element={<AddNote />} />
         </Routes>

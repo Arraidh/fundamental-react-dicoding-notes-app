@@ -1,12 +1,15 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
-import { getActiveNotes } from "../utils/local-data";
+import { getActiveNotes, getArchivedNotes } from "../utils/local-data";
 import NoteList from "../components/NoteList";
+import PropTypes from "prop-types";
 
-const HomePages = () => {
+const NoteListPage = ({activeNote}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get("search") || "";
-  const filteredNotes = getActiveNotes().filter((note) =>
+
+  const getListOfNotesFunction =  activeNote ? getActiveNotes() :   getArchivedNotes();
+  const filteredNotes = getListOfNotesFunction.filter((note) =>
     note.title.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -28,5 +31,10 @@ const HomePages = () => {
   );
 };
 
-export default HomePages;
+NoteListPage.propTypes = {
+  activeNote: PropTypes.bool,
+};
+
+
+export default NoteListPage;
 
