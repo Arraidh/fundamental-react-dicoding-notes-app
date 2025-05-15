@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import NoteDetail from "../pages/NoteDetail";
 import AddNote from "../pages/AddNote";
 import NoteListPage from "../pages/NoteListPage";
+import NotFound from "../pages/NotFound";
 
 const NotesApp = () => {
   return (
@@ -19,6 +20,7 @@ const NotesApp = () => {
           <Route path="archived" element={<NoteListPage activeNote={false} />} />
           <Route path="note/:noteId" element={<NoteDetail />} />
           <Route path="notes/add" element={<AddNote />} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </main>
     </div>
