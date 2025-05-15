@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePages from "../pages/HomePages";
 import NoteDetail from "../pages/NoteDetail";
 import AddNote from "../pages/AddNote";
+import ArchivedPages from "../pages/ArchivedPages";
 
 const NotesApp = () => {
   return (
@@ -16,6 +17,7 @@ const NotesApp = () => {
       <main>
         <Routes>
           <Route path="/" element={<HomePages />} />
+          <Route path="archived" element={<ArchivedPages />} />
           <Route path="note/:noteId" element={<NoteDetail />} />
           <Route path="notes/add" element={<AddNote />} />
         </Routes>

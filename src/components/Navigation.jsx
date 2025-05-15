@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiHome, FiPlusCircle } from "react-icons/fi";
+import { FiArchive, FiHome, FiPlusCircle } from "react-icons/fi";
 
 const Navigation = () => {
   return (
@@ -9,6 +9,11 @@ const Navigation = () => {
         <li>
           <Link to="/">
             <FiHome />
+          </Link>
+        </li>
+        <li>
+          <Link to="/archived">
+            <FiArchive />
           </Link>
         </li>
         <li>

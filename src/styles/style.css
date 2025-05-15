@@ -145,10 +145,17 @@ img {
   width: 100vw;
 }
 
-.delete-note-button{
+.note-detail-actions{
+  display: flex;
+  gap: 16px;
   position: absolute;
   bottom: 32px;
   right: 32px;
+  width: auto;
+}
+
+.delete-note-button{
+  
   padding: 8px;
   font-size: 28px;
   background-color: transparent;
