@@ -194,3 +194,18 @@ img {
   justify-content: center;
   height: 50vh;
 }
+.note-input__search {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.note-input__search:focus {
+  border-color: #666;
+
+}

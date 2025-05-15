@@ -4,9 +4,8 @@ import NoteItemTitle from "./NoteItemTitle";
 import NoteItemBody from "./NoteItemBody";
 import PropTypes from "prop-types";
 
-// TODO setup archived note functionality
 
-const NoteItem = ({ id, title, body, createdAt, archived }) => {
+const NoteItem = ({ id, title, body, createdAt,  }) => {
   return (
     <div className="note-item">
       <NoteItemDate dateContent={createdAt} />
@@ -21,7 +20,6 @@ NoteItem.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   createdAt: PropTypes.string,
-  archived: PropTypes.bool,
 };
 
 export default NoteItem;

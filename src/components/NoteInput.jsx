@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class NoteInput extends React.Component {
   constructor(props) {
@@ -33,7 +34,6 @@ class NoteInput extends React.Component {
 
   onSubmitEventHandler(event) {
     event.preventDefault();
-    console.log(this.state);
     this.props.addNote(this.state);
   }
 
@@ -58,4 +58,9 @@ class NoteInput extends React.Component {
   }
 }
 
+NoteInput.propTypes = {
+  addNote: PropTypes.func.isRequired,
+};
+
 export default NoteInput;
+

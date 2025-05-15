@@ -22,6 +22,7 @@ const NoteListPage = ({activeNote}) => {
       <h2>Note Lists</h2>
       <input
         type="text"
+        className="note-input__search"
         placeholder="Cari Catatan"
         value={search}
         onChange={onSearchChangeEventHandler}
